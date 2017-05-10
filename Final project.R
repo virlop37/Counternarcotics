@@ -31,10 +31,30 @@ print(grangertest(heroin$heroin_seizures~heroin$heroin_price_per_dose,order=1))
 #METHAMPHETAMINE#
 methamphetamine<-read.csv("seizuresmethamphetamine.csv")
 
-#Do methamphetamine seizures Granger-cause methamphetamine prices?
+#Do methamphetamine seizures Granger-cause methamphetamine prices? at 1000mg per dose
 print(grangertest(methamphetamine$methamphetamine_price_per_dose~methamphetamine$methamphetamine_seizures,order=1))
 #Do methamphetamine prices Granger cause methamphetamine seizures?
 print(grangertest(methamphetamine$methamphetamine_seizures~methamphetamine$methamphetamine_price_per_dose,order=1))
+
+#Do methamphetamine seizures Granger-cause methamphetamine prices? at 500mg per dose
+print(grangertest(methamphetamine$methamphetamine_price_per_dose2~methamphetamine$methamphetamine_seizures,order=1))
+#Do methamphetamine prices Granger-cause methamphetamine seizures?
+print(grangertest(methamphetamine$methamphetamine_seizures~methamphetamine$methamphetamine_price_per_dose2,order=1))
+
+#Do methamphetamine seizures Granger cause methamphetamine prices? at 200mg per dose
+print(grangertest(methamphetamine$methamphetamine_price_per_dose3~methamphetamine$methamphetamine_seizures,order=1))
+#Do methamphetamine prices Granger-cause methamphetamine seizures?
+print(grangertest(methamphetamine$methamphetamine_seizures~methamphetamine$methamphetamine_price_per_dose3,order=1))
+
+#Do methamphetamine seizures Granger cause methamphetamine prices? at 5000mg per dose 
+print(grangertest(methamphetamine$methamphetamine_price_per_dose_4~methamphetamine$methamphetamine_seizures,order=1))
+#Do methamphetamine prices Granger cause methamphetamine seizures?
+print(grangertest(methamphetamine$methamphetamine_seizures~methamphetamine$methamphetamine_price_per_dose_4,order=1))
+
+#Do methamphetamine seizures Granger cause methamphetamine prices? at 2mg per dose
+print(grangertest(methamphetamine$methamphetamine_price_per_dose_5~methamphetamine$methamphetamine_seizures,order=1))
+#Do methamphetamine prices granger cause methamphetamine seizures?
+print(grangertest(methamphetamine$methamphetamine_seizures~methamphetamine$methamphetamine_price_per_dose_5,order=1))
 
 #MARIJUANA#
 marijuana<-read.csv("seizuresmarijuana.csv")
